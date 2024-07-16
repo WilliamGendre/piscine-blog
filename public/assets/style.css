@@ -43,13 +43,17 @@ main{
 
 #articleBdd article{
     background-color: rgb(52, 53, 42);
-    width: 30%;
+    width: 28%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5% 0;
     color: rgb(231, 218, 170);
     border-radius: 50px;
+}
+
+#articleBdd article:hover{
+    width: 33%;
 }
 
 /* footer */

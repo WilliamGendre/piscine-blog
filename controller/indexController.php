@@ -2,6 +2,9 @@
 
 require_once('../config/config.php');
 
+$dbConnexion = new DbConnexion();
+$pdo = $dbConnexion->connect();
+
 // Permet de faire une requête Select sans parmètres
 $stmt = $pdo->query('SELECT * FROM articles');
 

@@ -6,23 +6,34 @@ error_reporting(E_ALL);
 
 session_set_cookie_params(30);
 
-// Link la base de donnée à mon PHP
 
-$dsn = 'mysql:host=localhost:3306; dbname=piscine_blog_php';
-$username = 'root';
-$password = 'root';
 
-// test si le $dsn, le $username, le $password sont bon
+class DbConnexion{
+    private $dsn;
+    private $username;
+    private $password;
 
-try{
+    function __construct(){
+        $this->dsn = 'mysql:host=localhost:3306; dbname=piscine_blog_php';
+        $this->username = 'root';
+        $this->password = 'root';
+    }
 
-    // créer une instance de classe
-    $pdo = new PDO($dsn, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
+    public function connect(){
+        // test si le $dsn, le $username, le $password sont bon
 
-// si se n'est pas bon
+        try{
 
-catch(PDOException $e){
-    echo 'erreur de connexion' . $e->getMessage();
+            // créer une instance de classe
+            $pdo = new PDO($this->dsn, $this->username, $this->password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+        }
+
+        // si se n'est pas bon
+
+        catch(PDOException $e){
+            echo 'erreur de connexion' . $e->getMessage();
+        }
+    }
 }
