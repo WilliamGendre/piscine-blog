@@ -22,8 +22,34 @@ header{
     padding: 2%;
 }
 
+/* main */
+
 main{
     background-color: rgb(136, 129, 101);
+}
+
+/* articleBdd */
+
+#mainIndexView{
+    height: 59vh;
+}
+
+#articleBdd{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5%;
+    padding: 5% 0;
+}
+
+#articleBdd article{
+    background-color: rgb(52, 53, 42);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    color: rgb(231, 218, 170);
+    border-radius: 50px;
 }
 
 /* footer */
