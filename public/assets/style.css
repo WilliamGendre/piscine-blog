@@ -38,7 +38,7 @@ main{
     display: flex;
     justify-content: space-around;
     margin: 0 5%;
-    padding: 5% 0;
+    padding: 7.5% 0;
 }
 
 #articleBdd article{

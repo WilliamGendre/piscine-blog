@@ -9,8 +9,6 @@
 
             echo "<article>";
             echo "<h2>" . $article['title'] . "</h2>";
-            echo "<h3>" . $article['content'] . "</h3>";
-            echo "<p>" . $article['createdAt'] . "</p>";
             echo "</article>";
         }
 
