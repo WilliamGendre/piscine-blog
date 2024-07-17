@@ -16,10 +16,11 @@ class ArticleRepository{
         return $articles;
     }
 
+    // Les paramètre de la fonction permettent de récupérer les valeures qui sont enregistrer dans le controlleur
     public function insert($title, $content, $date){
+
         // Instance de class pour connecter à la base de données
         // Model
-
         $dbConnexion = new DbConnexion();
         $pdo = $dbConnexion->connect();
 
