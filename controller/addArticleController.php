@@ -3,19 +3,25 @@
 require_once ('../config/config.php');
 require_once ('../model/articleRepository.php');
 
-class AddarticleController
+class AddArticleController
 {
 
     function addArticle()
     {
 
-        // controller
-        $title = 'Mercredi';
-        $content = 'milieu de semaine';
-        $date = "2024-07-17";
+        $isRequestOk= false;
 
-        $articleRepository = new articleRepository();
-        $isRequestOk = $articleRepository -> insert($title, $content, $date);
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+            // controller
+            $title = $_POST["title"];
+            $content = $_POST['content'];
+            $dateFormat = new DateTime('NOW');
+            $date = $dateFormat->format('Y-m-d');
+
+            $articleRepository = new articleRepository();
+            $isRequestOk = $articleRepository -> insert($title, $content, $date);
+        }
 
         require_once('../template/page/addArticleView.php');
 
@@ -23,5 +29,5 @@ class AddarticleController
 
 }
 
-$addArticleController = new AddarticleController();
+$addArticleController = new AddArticleController();
 $addArticleController->addArticle();
