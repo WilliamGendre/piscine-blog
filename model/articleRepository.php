@@ -1,7 +1,7 @@
 <?php
 
 class ArticleRepository{
-    public function findArticle(){
+    public function findArticles(){
 
         // Instance de class pour accèder à la base de donnée
         $dbConnexion = new DbConnexion();

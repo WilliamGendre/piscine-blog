@@ -9,7 +9,7 @@ class IndexController{
         
         // Instance de class pour appelé le tableau créer par la fonction findArticle
         $articleRepository = new ArticleRepository();
-        $articles = $articleRepository->findArticle();
+        $articles = $articleRepository->findArticles();
 
         require_once('../template/page/indexView.php');
     }
