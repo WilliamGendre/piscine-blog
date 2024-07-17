@@ -15,7 +15,9 @@ class AddarticleController
         $date = "2024-07-17";
 
         $articleRepository = new articleRepository();
-        $articleRepository -> insert($title, $content, $date);
+        $isRequestOk = $articleRepository -> insert($title, $content, $date);
+
+        require_once('../template/page/addArticleView.php');
 
     }
 
