@@ -2,6 +2,8 @@
 
 class ArticleRepository{
     public function findArticle(){
+
+        // Instance de class pour accèder à la base de donnée
         $dbConnexion = new DbConnexion();
         $pdo = $dbConnexion->connect();
 
