@@ -9,6 +9,7 @@
 
             echo "<article>";
             echo "<h2>" . $article['title'] . "</h2>";
+            echo "<a href='http://localhost/piscine-blog/controller/articleController.php?id=" . $article['id'] . "'>Sélectionner</a>";
             echo "</article>";
         }
 

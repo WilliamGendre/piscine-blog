@@ -42,4 +42,18 @@ class ArticleRepository{
 
         return $isRequestOk;
     }
+
+    public function findOneById($id){
+
+        // Permet d'appelé qu'une seule donnée, grâce à son Id (rentrer en dur dans se cas)
+        $sql = "SELECT * FROM articles WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $article = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $article;
+    }
 }

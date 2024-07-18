@@ -3,7 +3,7 @@
 require_once ('../config/config.php');
 require_once ('../model/articleRepository.php');
 
-class AddArticleController
+class ArticleController
 {
 
     function addArticle()
@@ -27,7 +27,20 @@ class AddArticleController
 
     }
 
+    public function showArticle()
+    {
+        // Permet de sélectionner l'Id directement dans l'URL : ?id=...
+        $id = $_GET['id'];
+
+        $articleRepository = new articleRepository();
+        // Déclare la valeure $article en lui donnant pour valeur l'article à l'Id selectionné avec findOneById($id)
+        $article=$articleRepository ->findOneById($id);
+
+        require_once ('../template/page/showArticleView.php');
+    }
+
 }
 
-$addArticleController = new AddArticleController();
-$addArticleController->addArticle();
+$articleController = new ArticleController();
+// $articleController->addArticle();
+$articleController->showArticle();

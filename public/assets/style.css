@@ -35,13 +35,10 @@ h1{
 
 /* articleBdd */
 
-#mainIndexView{
-    height: 59vh;
-}
-
 #articleBdd{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0 5%;
     padding: 7.5% 0;
 }
@@ -55,10 +52,21 @@ h1{
     padding: 5% 0;
     color: rgb(231, 218, 170);
     border-radius: 50px;
+    margin: 2% 0;
+}
+
+#articleBdd article a{
+    text-decoration: none;
+    color: rgb(231, 218, 170);
+    margin-top: 2%;
 }
 
 #articleBdd article:hover{
     width: 33%;
+}
+
+#articleBdd article a:hover{
+    color: red;
 }
 
 /* formulaire */
