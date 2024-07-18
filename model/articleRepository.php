@@ -45,7 +45,7 @@ class ArticleRepository{
 
     public function findOneById($id){
 
-        // Permet d'appelé qu'une seule donnée, grâce à son Id (rentrer en dur dans se cas)
+        // Permet d'appelé qu'une seule donnée, grâce à son Id
         $sql = "SELECT * FROM articles WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
 
@@ -55,5 +55,16 @@ class ArticleRepository{
         $article = $stmt->fetch(PDO::FETCH_ASSOC);
 
         return $article;
+    }
+
+    public function deleteOneById($id){
+
+        // Permet de supprimer qu'une seule donnée, grâce à son Id
+        $sql = "DELETE FROM articles WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
     }
 }

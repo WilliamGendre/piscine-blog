@@ -39,6 +39,16 @@ class ArticleController
         require_once ('../template/page/showArticleView.php');
     }
 
+    public function deleteOneArticle()
+    {
+        $id = $_GET['id'];
+
+        $articleRepository = new articleRepository();
+        $deleteArticle = $articleRepository -> deleteOneById($id);
+
+        require_once ('../template/page/deleteArticleView.php');
+    }
+
 }
 
 //$articleController = new ArticleController();

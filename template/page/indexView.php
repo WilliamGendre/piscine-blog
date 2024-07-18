@@ -16,6 +16,7 @@
             echo "<article>";
             echo "<h2>" . $article['title'] . "</h2>";
             echo "<a href='http://localhost/piscine-blog/public/showArticle?id=" . $article['id'] . "'>Sélectionner</a>";
+            echo "<a href='http://localhost/piscine-blog/public/deleteArticle?id=" . $article['id'] . "'>Supprimer</a>";
             echo "</article>";
         }
 

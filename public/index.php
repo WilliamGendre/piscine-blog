@@ -24,4 +24,7 @@ if($uri === ''){
 } else if($uri === 'showArticle'){
     $showArticleController = new ArticleController();
     $showArticleController->showArticle();
+} else if($uri === 'deleteArticle'){
+    $articleController = new ArticleController();
+    $articleController->deleteOneArticle();
 }
