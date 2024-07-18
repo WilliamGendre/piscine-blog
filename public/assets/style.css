@@ -28,6 +28,10 @@ main{
     background-color: rgb(136, 129, 101);
 }
 
+.littleMain{
+    height: 57.5vh;
+}
+
 h1{
     text-align: center;
     padding: 2%;
@@ -88,6 +92,13 @@ label h2, label p{
     width: 70px;
 }
 
+/* showArticle */
+
+#showArticle h2{
+    text-align: center;
+    margin-top: 5%;
+}
+
 /* footer */
 
 footer{
@@ -96,4 +107,12 @@ footer{
     align-items: center;
     background-color: rgb(100, 95, 71);
     padding: 2%;
+}
+
+footer a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bolder;
+    font-size: larger;
 }

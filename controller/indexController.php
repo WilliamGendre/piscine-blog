@@ -18,5 +18,5 @@ class IndexController{
 
 // Instance de class pour utiliser le tableau grâce à indexView
 
-$indexController = new IndexController();
-$indexController->index();
+// $indexController = new IndexController();
+// $indexController->index();

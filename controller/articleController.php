@@ -41,6 +41,6 @@ class ArticleController
 
 }
 
-$articleController = new ArticleController();
+//$articleController = new ArticleController();
 // $articleController->addArticle();
-$articleController->showArticle();
+//$articleController->showArticle();

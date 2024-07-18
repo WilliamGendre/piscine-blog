@@ -1,7 +1,7 @@
 <?php require_once('../config/config.php'); ?>
 <?php require_once('../template/partiel/header.php'); ?>
 
-<main>
+<main class="littleMain">
 
     <h1>Envoie d'article</h1>
 

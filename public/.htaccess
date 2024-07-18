@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Permet de rediriger les requètes vers index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php [QSA,L]
