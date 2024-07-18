@@ -46,7 +46,8 @@ class ArticleController
         $articleRepository = new articleRepository();
         $deleteArticle = $articleRepository -> deleteOneById($id);
 
-        require_once ('../template/page/deleteArticleView.php');
+        //Renvoie directement à la page d'accueil
+        header("location: http://localhost/piscine-blog/public/");
     }
 
 }
