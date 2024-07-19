@@ -1,3 +1,4 @@
+<!-- Require version twig  -->
 {% include('partiel/header.html.twig') %}
 
 <main class="littleMain">
@@ -16,7 +17,10 @@
     </form>
 
     {% if isRequestOk %}
+
         <p id="articleEnregistrer">L'article a été enregistré avec succès</p>
+
+    <!-- ferme la balise if  -->
     {% endif %}
 
 </main>

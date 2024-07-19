@@ -10,15 +10,17 @@
             <a href="http://localhost/piscine-blog/public/addArticle">nouvelle article</a>
         </article>
 
-
+        <!-- foreach version twig (foreach(G as g) deviens for g in G) -->
         {% for article in articles %}
 
             <article>
+                <!-- {{ article.title }} = <?php echo article["title"]; ?>  -->
                 <h2>{{ article.title }}</h2>
                 <a href='http://localhost/piscine-blog/public/showArticle?id={{ article.id }}'>Sélectionner</a>
                 <a href='http://localhost/piscine-blog/public/deleteArticle?id={{ article.id }}'>Supprimer</a>
             </article>
 
+            <!-- ferme la balise for  -->
         {% endfor %}
     </section>
 
