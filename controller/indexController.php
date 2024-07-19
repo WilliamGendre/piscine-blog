@@ -11,12 +11,10 @@ class IndexController{
         $articleRepository = new ArticleRepository();
         $articles = $articleRepository->findArticles();
 
-        require_once('../template/page/indexView.php');
+        $loader = new \Twig\Loader\FilesystemLoader('../template');
+        $twig = new \Twig\Environment($loader);
+
+        echo $twig->render('page/index.html.twig', ['articles' => $articles]);
     }
 
 }
-
-// Instance de class pour utiliser le tableau grâce à indexView
-
-// $indexController = new IndexController();
-// $indexController->index();

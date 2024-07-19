@@ -1,5 +1,4 @@
-<?php require_once('../config/config.php'); ?>
-<?php require_once('../template/partiel/header.php'); ?>
+{% include('partiel/header.html.twig') %}
 
 <main class="littleMain">
 
@@ -16,10 +15,10 @@
         <input type="submit">
     </form>
 
-    <?php if($isRequestOk){ ?>
-        <p>L'article a été enregistré avec succès</p>
-    <?php } ?>
+    {% if isRequestOk %}
+        <p id="articleEnregistrer">L'article a été enregistré avec succès</p>
+    {% endif %}
 
 </main>
 
-<?php require_once('../template/partiel/footer.php'); ?>
+{% include('partiel/footer.html.twig') %}

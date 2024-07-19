@@ -1,0 +1,27 @@
+<!-- Require version twig  -->
+{% include('partiel/header.html.twig') %}
+
+<main id="mainIndexView">
+
+    <section id="articleBdd">
+
+        <article>
+            <h2>Ajouter un article</h2>
+            <a href="http://localhost/piscine-blog/public/addArticle">nouvelle article</a>
+        </article>
+
+
+        {% for article in articles %}
+
+            <article>
+                <h2>{{ article.title }}</h2>
+                <a href='http://localhost/piscine-blog/public/showArticle?id={{ article.id }}'>Sélectionner</a>
+                <a href='http://localhost/piscine-blog/public/deleteArticle?id={{ article.id }}'>Supprimer</a>
+            </article>
+
+        {% endfor %}
+    </section>
+
+</main>
+
+{% include('partiel/footer.html.twig') %}

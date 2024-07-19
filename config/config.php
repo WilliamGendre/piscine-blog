@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 session_set_cookie_params(30);
 
 
+// permet d'utiliser twig
+require_once ('../vendor/autoload.php');
 
 class DbConnexion{
     private $dsn;

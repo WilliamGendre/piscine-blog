@@ -23,7 +23,10 @@ class ArticleController
             $isRequestOk = $articleRepository -> insert($title, $content, $date);
         }
 
-        require_once('../template/page/addArticleView.php');
+        $loader = new \Twig\Loader\FilesystemLoader('../template');
+        $twig = new \Twig\Environment($loader);
+
+        echo $twig->render('page/addArticle.html.twig', ['isRequestOk' => $isRequestOk]);
 
     }
 
@@ -36,7 +39,10 @@ class ArticleController
         // Déclare la valeure $article en lui donnant pour valeur l'article à l'Id selectionné avec findOneById($id)
         $article=$articleRepository ->findOneById($id);
 
-        require_once ('../template/page/showArticleView.php');
+        $loader = new \Twig\Loader\FilesystemLoader('../template');
+        $twig = new \Twig\Environment($loader);
+
+        echo $twig->render('page/showArticle.html.twig', ['article' => $article]);
     }
 
     public function deleteOneArticle()
@@ -51,7 +57,3 @@ class ArticleController
     }
 
 }
-
-//$articleController = new ArticleController();
-// $articleController->addArticle();
-//$articleController->showArticle();

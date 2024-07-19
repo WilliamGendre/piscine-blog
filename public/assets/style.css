@@ -92,6 +92,10 @@ label h2, label p{
     width: 70px;
 }
 
+#articleEnregistrer{
+    text-align: center;
+}
+
 /* showArticle */
 
 #showArticle h2{
