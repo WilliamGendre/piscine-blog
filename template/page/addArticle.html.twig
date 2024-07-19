@@ -1,5 +1,10 @@
-<!-- Require version twig  -->
-{% include('partiel/header.html.twig') %}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<!-- extends permet d'apelé la partie du site qui ne change jamais -->
+
+<!-- block permet d'intégrer la partie au reste de la page -->
 
 <main class="littleMain">
 
@@ -24,5 +29,4 @@
     {% endif %}
 
 </main>
-
-{% include('partiel/footer.html.twig') %}
+{% endblock %}

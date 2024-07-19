@@ -1,6 +1,6 @@
-<!-- Require version twig  -->
-{% include('partiel/header.html.twig') %}
+{% extends 'base.html.twig' %}
 
+{% block content %}
 <main id="mainIndexView">
 
     <section id="articleBdd">
@@ -25,5 +25,4 @@
     </section>
 
 </main>
-
-{% include('partiel/footer.html.twig') %}
+{% endblock %}

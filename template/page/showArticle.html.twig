@@ -1,6 +1,7 @@
-<!-- Require version twig  -->
-{% include('partiel/header.html.twig') %}
+{% extends 'base.html.twig' %}
 
+
+{% block content %}
 <main class="littleMain">
 
     <h1>Le super blog</h1>
@@ -11,5 +12,4 @@
     </article>
 
 </main>
-
-{% include('partiel/footer.html.twig') %}
+{% endblock %}
